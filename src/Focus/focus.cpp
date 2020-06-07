@@ -76,6 +76,7 @@ void focus::CallJs(napi_env napiEnv, napi_value napi_js_cb, void* context, void*
     char dt[100];
     struct tm tmNow;
 
+    // Date format to ISO 8601
     _localtime64_s(&tmNow, &focus.date);
     strftime(dt , 100, "%Y-%m-%dT%H:%M:%S", &tmNow);
     std::string date = std::string(dt);
