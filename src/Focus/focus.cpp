@@ -122,7 +122,7 @@ Napi::Value focus::iniEventtHook(const Napi::CallbackInfo& info)
 		return env.Undefined();;
     } 
 	
-	Napi::String work_name = Napi::String::New(env, "async-work-name");
+	Napi::String work_name = Napi::String::New(env, "async-work");
 	
 	Napi::Function js_cb = info[0].As<Napi::Function>();
 	
